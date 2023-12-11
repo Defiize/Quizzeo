@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx mocha test",
     "start": "nodemon src/index.js",
-    "create-docker-db": "docker run -d --name mongo -p 27017:27017 mongo"
+    "create-docker-db": "docker run -d --name mongo -p 27017:27017 mongo",
+    "sonar": "docker run -d --name sonarqube -p 9000:9000 sonarqube"
   },
   "author": "",
   "license": "ISC",
