@@ -17,7 +17,7 @@ export async function createApp() {
     app.use(express.urlencoded({ extended: true }))
 
     app.set("view engine", "ejs")
-    app.set("views", "C:/Travail/cordonbleu-maalsi22-main/src/views")
+    app.set("views", "src/views")
 
     app.get("/home", async (req, res) => {
         let recipes = await DbRecipe.find()
