@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cordon-bleu</title>
+  </head>
+
+  <body>
+    <%if(showLoginButton){%>
+        <div class="login">
+        <form action="/login">
+            <button type="submit">Login</button>
+        </form>
+        </div>
+    <%}%>
+    <h1>Bienvenue sur Cordon-bleu!</h1>
+    <section class="popularRecipes">
+      <h2>Popular recipes</h2>
+      <ul>
+        <% for(const recipe of recipes) { %>
+            <li>
+                <a href="/recipe/<%=recipe._id%>" class="recipe">
+                    <span> <%=recipe.name%> </span> -
+                    <span> <%=recipe.difficulty%> </span>
+                </a>
+            </li>
+        <%}%>
+      </ul>
+    </section>
+    <section class="addRecipe">
+        <form action="/recipe" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <label for="originCountry">Country:</label>
+            <input type="text" name="originCountry">
+            <input type="submit" value="Create new recipe">
+        </form>
+    </section>
+  </body>
+</html>

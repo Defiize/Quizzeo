@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Quel pays est associé à ce drapeau ?</h1>
+    <p id="countryName" name="countryName">debug : <%= countryName %></p>
+    <img src="<%= flagURL %>" alt="Drapeau">
+
+    <!-- Formulaire pour collecter la réponse -->
+    <form action="/quiz" method="post">
+        <label for="answer">Réponse :</label>
+        <input type="hidden" id="countryName" name="countryName" value="<%= countryName %>">
+        <input type="text" id="answer" name="answer">
+        <button type="submit">Valider</button>
+    </form>
+</body>
+</html>
