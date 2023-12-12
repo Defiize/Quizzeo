@@ -15,7 +15,7 @@ describe('getCountriesData', () => {
 
         expect(result).to.deep.equal(responseData);
         expect(axiosStub.calledWith('https://restcountries.com/v3.1/all')).to.be.true;
-        // N'oubliez pas de restaurer le stub après le test
+        // Don't forget to restore the stub after testing
         axios.get.restore();
     });
 
@@ -32,7 +32,7 @@ describe('getCountriesData', () => {
             errorMessage
         )).to.be.true;
 
-        // N'oubliez pas de restaurer les stubs après le test
+        // Don't forget to restore the stub after testing
         axios.get.restore();
         consoleErrorStub.restore();
     });

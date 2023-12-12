@@ -42,29 +42,25 @@ export async function createApp() {
         res.redirect("/home")
     })
 
-        // Fonction pour générer une question "drapeau vers pays" et recevoir la réponse de l'utilisateur
+        // Function to generate a "flag to country" question and receive the user's answer
     app.get("/quiz", async (req, res) => {
         const countriesData = await getCountriesData(); // Récupérer les données des pays depuis l'API
 
-        // Choix aléatoire d'un pays
+        // Random country
         const randomIndex = Math.floor(Math.random() * countriesData.length);
         const country = countriesData[randomIndex];
         const countryName = country.name.common;
         const flagURL = country.flags.png;
 
-        // Afficher la question (le drapeau) à l'utilisateur
+        // Display the question
         res.render("quiz", { flagURL, countryName });
     });
 
-    // Endpoint pour recevoir la réponse de l'utilisateur via POST
-    app.post("/quiz", (req, res) => {// Récupérer la réponse de l'utilisateur depuis le corps de la requête
+    app.post("/quiz", (req, res) => {
         const userAnswer = req.body.answer;
         const response = req.body.countryName
-        // Comparer la réponse de l'utilisateur avec la réponse attendue (par exemple, countryName obtenue lors de la génération de la question)
-        // Vous pouvez implémenter votre logique de comparaison ici
-        // Par exemple, vérifier si userAnswer correspond à countryName
 
-        // En fonction du résultat de la comparaison, envoyer une réponse appropriée à l'utilisateur
+        // Based on the comparison result, send an appropriate response to the user
         if (userAnswer === response) {
             res.send("Correct! </br> <a href='/quiz'>Retourner au quiz</a>");
 
