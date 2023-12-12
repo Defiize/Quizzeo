@@ -1,6 +1,10 @@
+// Extern import
 import { expect } from "chai";
-import { DbRecipe } from "../src/DbRecipe.js";
 import mongoose from "mongoose";
+
+// Intern import
+import { DbRecipe } from "../src/DbRecipe.js";
+
 
 describe('test Db Recipe', () => {
     beforeEach(async () => {

@@ -1,4 +1,7 @@
+// Extern import
 import { expect } from "chai";
+
+// Intern import
 import { isLeap } from "../src/leapYear.js";
 
 describe('test Leap Year incorrect calls', () => {

@@ -1,8 +1,11 @@
-import { createApp } from "../src/createApp.js";
-import request from "supertest"
-import { JSDOM } from "jsdom"
+// Extern import
 import { expect } from "chai";
+import { JSDOM } from "jsdom"
+import request from "supertest"
 import sinon from "sinon";
+
+// Intern import
+import { createApp } from "../src/createApp.js";
 import { DbRecipe } from "../src/DbRecipe.js";
 
 describe('Add new recipe', async () => {

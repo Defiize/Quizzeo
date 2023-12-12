@@ -1,7 +1,11 @@
+// Extern import
 import mongoose from "mongoose";
+
+// Intern import
 import { createApp } from "./createApp.js";
-import { initializeFfManager} from "./featureFlag.js";
 import { DbRecipe } from "./DbRecipe.js"
+import { initializeFfManager} from "./featureFlag.js";
+
 
 const isEnabled = await initializeFfManager()
 

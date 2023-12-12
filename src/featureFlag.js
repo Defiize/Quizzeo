@@ -1,4 +1,8 @@
+// Extern import
 import { startUnleash } from 'unleash-client'
+
+// Intern import
+// ...
 
 const ffUrl="https://gitlab.com/api/v4/feature_flags/unleash/36069767"
 const ffServerKey="G1Zu8SauEaFduUS5WPKj"

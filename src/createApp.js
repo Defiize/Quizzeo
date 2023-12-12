@@ -1,9 +1,15 @@
+// Extern import
 import express from "express"
+import stringSimilarity from "string-similarity" 
+
+// Intern import
+import { DbRecipe } from "./DbRecipe.js"
+import { getCountriesData } from "./countriesData.js"
 import { initializeFfManager } from "./featureFlag.js"
 import { tagRecipeDifficulty } from "./difficultyTagger.js"
-import { getCountriesData } from "./countriesData.js"
-import { DbRecipe } from "./DbRecipe.js"
-import stringSimilarity from "string-similarity" 
+
+
+
 const isEnabled = await initializeFfManager()
 
 // let DbRecipe = null

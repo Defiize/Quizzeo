@@ -1,6 +1,9 @@
+// Extern import
 import axios from 'axios';
 import stringSimilarity from 'string-similarity'; // Modification pour importer stringSimilarity en tant que module ES6
 
+// Intern import
+// ...
 
     // Récupération des données des pays depuis l'API restcountries.com
     async function getCountriesData() {

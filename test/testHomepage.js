@@ -1,7 +1,10 @@
-import { createApp } from "../src/createApp.js";
-import request from "supertest"
-import { JSDOM } from "jsdom"
+// Extern import
 import { expect } from "chai";
+import { JSDOM } from "jsdom"
+import request from "supertest"
+
+// Intern import
+import { createApp } from "../src/createApp.js";
 
 describe('Pages tests', async () => {
     

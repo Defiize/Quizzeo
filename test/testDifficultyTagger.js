@@ -1,4 +1,7 @@
+// Extern import
 import { expect } from "chai";
+
+// Intern import
 import { tagRecipeDifficulty } from "../src/difficultyTagger.js";
 
 describe('test Difficulty Tagger', () => {

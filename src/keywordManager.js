@@ -1,3 +1,9 @@
+// Extern import
+// ...
+
+// Intern import
+// ...
+
 const keywordTextMap = {
     "keyword1" : "text",
 };

@@ -1,3 +1,9 @@
+// Extern import
+// ...
+
+// Intern import
+// ...
+
 export function isLeap(year){
     if(year == undefined || year == null || typeof(year) != 'number'){
         throw Error()

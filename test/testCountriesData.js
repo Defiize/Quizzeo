@@ -1,6 +1,9 @@
-import {expect} from "chai";
+// Extern import
 import axios from 'axios';
+import {expect} from "chai";
 import sinon from "sinon";
+
+// Intern import
 import {getCountriesData} from "../src/countriesData.js"; // Remplacez par le chemin correct de votre fichier
 
 describe('getCountriesData', () => {

@@ -1,4 +1,8 @@
+// Extern import
 import mongoose from "mongoose";
+
+// Intern import
+// ...
 
 const DbRecipeSchema = mongoose.Schema({
     name: String,

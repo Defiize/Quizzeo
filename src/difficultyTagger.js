@@ -1,3 +1,9 @@
+// Extern import
+// ...
+
+// Intern import
+// ...
+
 export function tagRecipeDifficulty(recipe){
     if(recipe.needOven && recipe.needSpecificTools && recipe.isExotic){
         return "hard"
