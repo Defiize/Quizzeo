@@ -1,7 +1,3 @@
-Dans le fichier CreateApp.js change cette ligne :
-
-ReadMe : 
-
 This application is a quiz application.
 At the moment, it is a country quiz without score.
 The soft take data in a country API with the countriesData.js
